@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Brawl Stars — Galaxy Brawl</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Fundo -->
+    <div class="stars"></div>
+    <div class="stars stars2"></div>
+    <div class="stars stars3"></div>
+
+    <!-- Navegação -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                ⭐ BRAWL<span>GALAXY</span>
+            </div>
+
+            <div class="menu">
+                <a href="#inicio">Início</a>
+                <a href="#brawlers">Brawlers</a>
+                <a href="#universo">Universo</a>
+                <a href="#novidades">Novidades</a>
+            </div>
+
+            <button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <main>
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">🛸 TRANSMISSÃO DA GALÁXIA</p>
+
+                <h1>
+                    BRAWL
+                    <span>GALAXY</span>
+                </h1>
+
+                <p class="description">
+                    Entre em uma galáxia desconhecida, escolha seu Brawler
+                    e prepare-se para batalhas intergalácticas.
+                </p>
+
+                <div class="buttons">
+                    <a href="#brawlers" class="btn primary">
+                        🚀 EXPLORAR
+                    </a>
+
+                    <a href="#universo" class="btn secondary">
+                        👽 DESCUBRIR
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="planet">
+                <div class="planet-ring"></div>
+                <div class="planet-core">👽</div>
+            </div>
+
+        </section>
+
+
+        <!-- BRAWLERS -->
+        <section id="brawlers" class="section">
+
+            <p class="section-subtitle">PERSONAGENS DA GALÁXIA</p>
+
+            <h2>ESCOLHA SEU <span>BRAWLER</span></h2>
+
+            <div class="brawler-grid">
+
+                <article class="brawler-card purple">
+
+                    <div class="character">
+                        👻
+                    </div>
+
+                    <div class="card-content">
+                        <span>EPIC</span>
+                        <h3>TARA</h3>
+                        <p>
+                            Uma misteriosa guerreira capaz de controlar
+                            forças cósmicas.
+                        </p>
+
+                        <div class="stats">
+                            <div>
+                                <small>ATAQUE</small>
+                                <div class="bar">
+                                    <i style="width: 85%"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <small>DEFESA</small>
+                                <div class="bar">
+                                    <i style="width: 65%"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="brawler-card blue">
+
+                    <div class="character">
+                        🤖
+                    </div>
+
+                    <div class="card-content">
+                        <span>MYTHIC</span>
+                        <h3>SURGE</h3>
+                        <p>
+                            Um robô espacial que evolui durante a batalha.
+                        </p>
+
+                        <div class="stats">
+                            <div>
+                                <small>ATAQUE</small>
+                                <div class="bar">
+                                    <i style="width: 95%"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <small>DEFESA</small>
+                                <div class="bar">
+                                    <i style="width: 70%"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="brawler-card green">
+
+                    <div class="character">
+                        👽
+                    </div>
+
+                    <div class="card-content">
+                        <span>ALIEN</span>
+                        <h3>ALIEN X</h3>
+                        <p>
+                            Um visitante de outro planeta com poderes
+                            desconhecidos.
+                        </p>
+
+                        <div class="stats">
+                            <div>
+                                <small>ATAQUE</small>
+                                <div class="bar">
+                                    <i style="width: 75%"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <small>DEFESA</small>
+                                <div class="bar">
+                                    <i style="width: 90%"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- UNIVERSO -->
+        <section id="universo" class="universe">
+
+            <div class="alien">
+                👽
+            </div>
+
+            <div class="universe-content">
+
+                <p class="section-subtitle">
+                    UM NOVO UNIVERSO
+                </p>
+
+                <h2>
+                    O ESPAÇO
+                    <span>PRECISA DE VOCÊ</span>
+                </h2>
+
+                <p>
+                    Uma misteriosa anomalia apareceu nos limites do Starr Park.
+                    Portais estão surgindo por toda a galáxia e ninguém sabe
+                    quem está por trás deles.
+                </p>
+
+                <button class="btn primary" onclick="mensagemAlien()">
+                    🛸 INVESTIGAR PORTAL
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOVIDADES -->
+        <section id="novidades" class="section">
+
+            <p class="section-subtitle">
+                TRANSMISSÕES RECENTES
+            </p>
+
+            <h2>ÚLTIMAS <span>DESCOBERTAS</span></h2>
+
+            <div class="news-grid">
+
+                <div class="news-card">
+                    <div class="news-icon">🌌</div>
+                    <h3>PORTAL ABERTO</h3>
+                    <p>
+                        Um novo portal foi localizado próximo
+                        ao planeta Starr.
+                    </p>
+                    <button onclick="lerNoticia('portal')">
+                        LER MAIS →
+                    </button>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-icon">👽</div>
+                    <h3>VIDA ALIENÍGENA</h3>
+                    <p>
+                        Sinais desconhecidos foram detectados
+                        vindo de uma galáxia distante.
+                    </p>
+                    <button onclick="lerNoticia('alien')">
+                        LER MAIS →
+                    </button>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-icon">🚀</div>
+                    <h3>NOVA MISSÃO</h3>
+                    <p>
+                        Prepare sua equipe para uma missão
+                        além das estrelas.
+                    </p>
+                    <button onclick="lerNoticia('missao')">
+                        LER MAIS →
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            ⭐ BRAWL<span>GALAXY</span>
+        </div>
+
+        <p>
+            Site de fã criado para fins de aprendizado e diversão.
+        </p>
+
+        <p class="copyright">
+            © 2026 BrawlGalaxy — Projeto independente de fã.
+        </p>
+
+    </footer>
+
+
+    <div id="popup" class="popup">
+        <div class="popup-box">
+            <button onclick="fecharPopup()">×</button>
+            <div id="popup-content"></div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
