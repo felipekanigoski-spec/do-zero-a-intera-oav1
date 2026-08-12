@@ -1,1613 +1,195 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BrawlGalaxy 🚀</title>
+    <title>BrawlGalaxy 🚀</title>
 
-<style>
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background:
-        radial-gradient(circle at 20% 20%, #32116b 0%, transparent 25%),
-        radial-gradient(circle at 80% 70%, #003b5c 0%, transparent 25%),
-        #030511;
-
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-    overflow-x: hidden;
-}
-
-
-/* =========================
-   ESTRELAS
-========================= */
-
-.stars,
-.stars2,
-.stars3 {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-
-    background-image:
-        radial-gradient(white 1px, transparent 1px);
-
-    background-size: 80px 80px;
-    opacity: .35;
-
-    animation: estrelas 25s linear infinite;
-}
-
-.stars2 {
-    background-size: 130px 130px;
-    opacity: .2;
-    animation-duration: 40s;
-}
-
-.stars3 {
-    background-size: 200px 200px;
-    opacity: .15;
-    animation-duration: 60s;
-}
-
-@keyframes estrelas {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(80px);
-    }
-}
-
-
-/* =========================
-   MENU
-========================= */
-
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-
-    background: rgba(3,5,17,.75);
-    backdrop-filter: blur(15px);
-
-    border-bottom: 1px solid rgba(0,255,255,.2);
-}
-
-.navbar {
-    max-width: 1200px;
-    height: 75px;
-    margin: auto;
-
-    padding: 0 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    font-size: 21px;
-    font-weight: 900;
-
-    text-shadow: 0 0 15px #00ffff;
-}
-
-.logo span {
-    color: #00ffff;
-}
-
-.menu {
-    display: flex;
-    gap: 30px;
-}
-
-.menu a {
-    color: #c7ccef;
-    text-decoration: none;
-    font-size: 12px;
-
-    transition: .3s;
-}
-
-.menu a:hover {
-    color: #00ffff;
-    text-shadow: 0 0 15px #00ffff;
-}
-
-.menu-btn {
-    display: none;
-
-    background: none;
-    border: none;
-
-    color: white;
-    font-size: 28px;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 100vh;
-    max-width: 1200px;
-    margin: auto;
-
-    padding: 130px 30px 70px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 50px;
-}
-
-.hero-content {
-    max-width: 650px;
-}
-
-.small-title {
-    color: #00ffff;
-
-    font-size: 12px;
-    letter-spacing: 4px;
-
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: clamp(60px, 9vw, 120px);
-    line-height: .85;
-
-    font-weight: 900;
-
-    text-shadow:
-        5px 5px 0 #5c1aff,
-        0 0 35px rgba(0,255,255,.4);
-}
-
-.hero h1 span {
-    display: block;
-
-    color: #00ffff;
-
-    text-shadow:
-        0 0 10px #00ffff,
-        0 0 30px #00ffff;
-}
-
-.description {
-    max-width: 560px;
-
-    color: #aeb6d5;
-
-    line-height: 1.8;
-
-    margin: 35px 0;
-}
-
-.buttons {
-    display: flex;
-    gap: 15px;
-
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-block;
-
-    padding: 17px 27px;
-
-    text-decoration: none;
-
-    font-family: inherit;
-    font-weight: bold;
-    font-size: 12px;
-
-    cursor: pointer;
-
-    transition: .3s;
-}
-
-.primary {
-    color: #02030b;
-
-    background: #00ffff;
-
-    border: none;
-
-    box-shadow:
-        0 0 15px #00ffff,
-        0 0 35px rgba(0,255,255,.3);
-}
-
-.primary:hover {
-    transform: translateY(-5px) scale(1.03);
-}
-
-.secondary {
-    color: white;
-
-    background: rgba(168,0,255,.08);
-
-    border: 1px solid #a800ff;
-}
-
-.secondary:hover {
-    background: #a800ff;
-
-    box-shadow:
-        0 0 25px #a800ff;
-}
-
-
-/* =========================
-   PLANETA
-========================= */
-
-.planet {
-    width: 330px;
-    height: 330px;
-
-    flex-shrink: 0;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-
-    background:
-        radial-gradient(
-            circle at 35% 30%,
-            #b6ff00,
-            #00a86b 35%,
-            #07517a 70%,
-            #050713
-        );
-
-    box-shadow:
-        0 0 40px #00ffcc,
-        0 0 100px rgba(0,255,255,.3);
-
-    animation: planeta 4s ease-in-out infinite;
-}
-
-.planet-core {
-    font-size: 110px;
-
-    filter:
-        drop-shadow(0 0 20px #00ffcc);
-}
-
-.planet-ring {
-    position: absolute;
-
-    width: 440px;
-    height: 100px;
-
-    border: 10px solid rgba(0,255,255,.55);
-
-    border-radius: 50%;
-
-    transform: rotate(-20deg);
-
-    box-shadow: 0 0 20px #00ffff;
-}
-
-@keyframes planeta {
-
-    0%,100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-
-}
-
-
-/* =========================
-   SEÇÕES
-========================= */
-
-.section {
-    max-width: 1200px;
-
-    margin: auto;
-
-    padding: 110px 30px;
-}
-
-.section-subtitle {
-    color: #00ffff;
-
-    font-size: 12px;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 20px;
-}
-
-.section h2 {
-    font-size: clamp(30px,5vw,55px);
-
-    margin-bottom: 50px;
-}
-
-.section h2 span {
-    color: #00ffff;
-}
-
-
-/* =========================
-   BRAWLERS
-========================= */
-
-.brawler-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap: 25px;
-}
-
-.brawler-card {
-
-    min-height: 480px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,.08),
-            rgba(0,0,0,.5)
-        );
-
-    border: 1px solid rgba(255,255,255,.15);
-
-    transition: .4s;
-}
-
-.brawler-card:hover {
-
-    transform:
-        translateY(-12px)
-        scale(1.02);
-
-    border-color: #00ffff;
-
-    box-shadow:
-        0 20px 60px rgba(0,255,255,.2);
-}
-
-
-/* ÁREA DO PERSONAGEM */
-
-.character {
-
-    height: 270px;
-
-    display: flex;
-
-    align-items: flex-end;
-
-    justify-content: center;
-
-    overflow: hidden;
-
-    position: relative;
-}
-
-.character::after {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            transparent 55%,
-            rgba(0,0,0,.8)
-        );
-
-    pointer-events: none;
-}
-
-.purple .character {
-    background:
-        radial-gradient(
-            circle,
-            #7a23d4,
-            #260852
-        );
-}
-
-.blue .character {
-    background:
-        radial-gradient(
-            circle,
-            #009dff,
-            #06274e
-        );
-}
-
-.green .character {
-    background:
-        radial-gradient(
-            circle,
-            #64ff00,
-            #063c2a
-        );
-}
-
-
-/* IMAGEM REAL DO BRAWLER */
-
-.character img {
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-
-    object-position: center bottom;
-
-    position: relative;
-
-    z-index: 2;
-
-    filter:
-        drop-shadow(
-            0 0 12px
-            rgba(0,255,255,.4)
-        );
-
-    transition: .4s;
-}
-
-.brawler-card:hover .character img {
-
-    transform:
-        scale(1.12)
-        translateY(-8px);
-
-    filter:
-        drop-shadow(0 0 15px #00ffff)
-        drop-shadow(0 0 30px rgba(0,255,255,.5));
-}
-
-
-/* TEXTO */
-
-.card-content {
-    padding: 25px;
-}
-
-.card-content span {
-
-    color: #00ffff;
-
-    font-size: 10px;
-}
-
-.card-content h3 {
-
-    font-size: 28px;
-
-    margin: 8px 0;
-}
-
-.card-content p {
-
-    color: #9da6c8;
-
-    font-size: 12px;
-
-    line-height: 1.7;
-}
-
-
-/* STATUS */
-
-.stats {
-    margin-top: 20px;
-}
-
-.stats small {
-
-    color: #77809f;
-
-    font-size: 8px;
-}
-
-.bar {
-
-    height: 5px;
-
-    background: #1a2039;
-
-    margin:
-        5px 0 12px;
-}
-
-.bar i {
-
-    display: block;
-
-    height: 100%;
-
-    background: #00ffff;
-
-    box-shadow:
-        0 0 10px #00ffff;
-}
-
-
-/* =========================
-   UNIVERSO
-========================= */
-
-.universe {
-
-    max-width: 1200px;
-
-    min-height: 600px;
-
-    margin: auto;
-
-    padding: 100px 30px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 100px;
-}
-
-.alien {
-
-    width: 380px;
-    height: 380px;
-
-    flex-shrink: 0;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 150px;
-
-    background:
-        radial-gradient(
-            circle at 50% 40%,
-            #a7ff00,
-            #178f4e 50%,
-            #06121c
-        );
-
-    box-shadow:
-        0 0 50px #3cff00,
-        0 0 120px rgba(60,255,0,.2);
-
-    animation:
-        planeta 4s ease-in-out infinite;
-}
-
-.universe-content {
-
-    max-width: 550px;
-}
-
-.universe h2 {
-
-    font-size:
-        clamp(35px,5vw,60px);
-
-    margin-bottom: 25px;
-}
-
-.universe h2 span {
-
-    display: block;
-
-    color: #00ffff;
-}
-
-.universe-content > p {
-
-    color: #aeb6d5;
-
-    line-height: 1.8;
-
-    margin-bottom: 30px;
-}
-
-
-/* =========================
-   NOVIDADES
-========================= */
-
-.news-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap: 25px;
-}
-
-.news-card {
-
-    padding: 30px;
-
-    background:
-        rgba(8,15,35,.7);
-
-    border:
-        1px solid
-        rgba(0,255,255,.12);
-
-    transition: .3s;
-}
-
-.news-card:hover {
-
-    transform:
-        translateY(-8px);
-
-    border-color:
-        #a800ff;
-}
-
-.news-icon {
-
-    font-size: 50px;
-
-    margin-bottom: 20px;
-}
-
-.news-card h3 {
-
-    margin-bottom: 15px;
-}
-
-.news-card p {
-
-    color: #8993b8;
-
-    font-size: 12px;
-
-    line-height: 1.7;
-
-    margin-bottom: 20px;
-}
-
-.news-card button {
-
-    background: none;
-
-    border: none;
-
-    color: #00ffff;
-
-    font-family: inherit;
-
-    font-weight: bold;
-
-    cursor: pointer;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-
-    padding: 60px 30px;
-
-    text-align: center;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,.1);
-
-    color: #69718e;
-
-    font-size: 11px;
-}
-
-.footer-logo {
-
-    color: white;
-
-    font-size: 20px;
-
-    font-weight: bold;
-
-    margin-bottom: 15px;
-}
-
-.footer-logo span {
-
-    color: #00ffff;
-}
-
-.copyright {
-
-    margin-top: 20px;
-
-    color: #414862;
-}
-
-
-/* =========================
-   POPUP
-========================= */
-
-.popup {
-
-    position: fixed;
-
-    inset: 0;
-
-    display: none;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background:
-        rgba(0,0,0,.8);
-
-    z-index: 500;
-}
-
-.popup.active {
-
-    display: flex;
-}
-
-.popup-box {
-
-    width: min(500px,90%);
-
-    padding: 35px;
-
-    background: #080c20;
-
-    border:
-        1px solid
-        #00ffff;
-
-    box-shadow:
-        0 0 50px
-        rgba(0,255,255,.3);
-
-    position: relative;
-}
-
-.popup-box > button {
-
-    position: absolute;
-
-    right: 15px;
-    top: 10px;
-
-    background: none;
-
-    border: none;
-
-    color: white;
-
-    font-size: 25px;
-
-    cursor: pointer;
-}
-
-.popup-box h3 {
-
-    color: #00ffff;
-
-    margin-bottom: 15px;
-}
-
-.popup-box p {
-
-    color: #aeb6d5;
-
-    line-height: 1.8;
-}
-
-
-/* =========================
-   CELULAR
-========================= */
-
-@media(max-width:800px) {
-
-    .menu {
-        display: none;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .hero {
-
-        flex-direction: column;
-
-        text-align: center;
-
-        padding-top: 130px;
-    }
-
-    .description {
-
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .buttons {
-
-        justify-content: center;
-    }
-
-    .planet {
-
-        width: 240px;
-        height: 240px;
-    }
-
-    .planet-ring {
-
-        width: 310px;
-    }
-
-    .brawler-grid,
-    .news-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-    .universe {
-
-        flex-direction: column;
-
-        text-align: center;
-
-        gap: 60px;
-    }
-
-    .alien {
-
-        width: 260px;
-        height: 260px;
-
-        font-size: 100px;
-    }
-}
-
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+    <!-- FUNDO ESPACIAL -->
+    <div class="stars"></div>
+    <div class="stars stars-2"></div>
+    <div class="stars stars-3"></div>
 
-<!-- ESTRELAS -->
 
-<div class="stars"></div>
-<div class="stars2"></div>
-<div class="stars3"></div>
+    <!-- MENU -->
+    <header>
 
+        <nav class="navbar">
 
-<!-- MENU -->
+            <a href="#inicio" class="logo">
+                ⭐ BRAWL<span>GALAXY</span>
+            </a>
 
-<header>
+            <div class="menu" id="menu">
 
-<nav class="navbar">
+                <a href="#inicio">INÍCIO</a>
+                <a href="#brawlers">BRAWLERS</a>
+                <a href="#jogo">🎮 JOGAR</a>
+                <a href="#universo">UNIVERSO</a>
+                <a href="#novidades">NOVIDADES</a>
 
-<div class="logo">
-⭐ BRAWL<span>GALAXY</span>
-</div>
+            </div>
 
-<div class="menu">
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
 
-<a href="#inicio">INÍCIO</a>
+        </nav>
 
-<a href="#brawlers">BRAWLERS</a>
+    </header>
 
-<a href="#universo">UNIVERSO</a>
 
-<a href="#novidades">NOVIDADES</a>
+    <!-- =========================
+         INÍCIO
+    ========================== -->
 
-</div>
+    <main>
 
-<button
-class="menu-btn"
-onclick="abrirMenu()">
-☰
-</button>
+        <section id="inicio" class="hero">
 
-</nav>
+            <div class="hero-content">
 
-</header>
+                <p class="small-title">
+                    🛸 TRANSMISSÃO DA GALÁXIA
+                </p>
 
+                <h1>
+                    BRAWL
+                    <span>GALAXY</span>
+                </h1>
 
+                <p class="description">
+                    Entre em uma galáxia desconhecida,
+                    escolha seu Brawler e prepare-se
+                    para batalhas intergalácticas.
+                </p>
 
-<!-- HERO -->
+                <div class="buttons">
 
-<section
-id="inicio"
-class="hero">
+                    <a href="#brawlers" class="btn primary">
+                        🚀 EXPLORAR
+                    </a>
 
-<div class="hero-content">
+                    <a href="#jogo" class="btn secondary">
+                        🎮 JOGAR AGORA
+                    </a>
 
-<p class="small-title">
-🛸 TRANSMISSÃO DA GALÁXIA
-</p>
+                </div>
 
-<h1>
+            </div>
 
-BRAWL
 
-<span>GALAXY</span>
+            <div class="planet">
 
-</h1>
+                <div class="planet-ring"></div>
 
-<p class="description">
+                <div class="planet-core">
+                    👽
+                </div>
 
-Entre em uma galáxia desconhecida,
-escolha seu Brawler e prepare-se
-para batalhas intergalácticas.
+            </div>
 
-</p>
+        </section>
 
-<div class="buttons">
 
-<a
-href="#brawlers"
-class="btn primary">
+        <!-- =========================
+             BRAWLERS
+        ========================== -->
 
-🚀 EXPLORAR BRAWLERS
+        <section id="brawlers" class="section">
 
-</a>
+            <p class="section-subtitle">
+                PERSONAGENS DA GALÁXIA
+            </p>
 
-<a
-href="#universo"
-class="btn secondary">
+            <h2>
+                ESCOLHA SEU
+                <span>BRAWLER</span>
+            </h2>
 
-👽 DESCUBRIR UNIVERSO
 
-</a>
+            <div class="brawler-grid">
 
-</div>
 
-</div>
+                <!-- TARA -->
 
+                <article class="brawler-card purple">
 
-<div class="planet">
+                    <div class="character">
 
-<div class="planet-ring"></div>
+                        <img
+                            src="images/tara.png"
+                            alt="Tara">
 
-<div class="planet-core">
-👽
-</div>
+                    </div>
 
-</div>
+                    <div class="card-content">
 
-</section>
+                        <span>ÉPICA</span>
 
+                        <h3>TARA</h3>
 
+                        <p>
+                            Uma misteriosa guerreira
+                            capaz de controlar forças
+                            cósmicas.
+                        </p>
 
-<!-- BRAWLERS -->
+                        <div class="stats">
 
-<section
-id="brawlers"
-class="section">
+                            <small>ATAQUE</small>
 
-<p class="section-subtitle">
-PERSONAGENS DA GALÁXIA
-</p>
+                            <div class="bar">
+                                <i style="width: 85%"></i>
+                            </div>
 
-<h2>
-ESCOLHA SEU
-<span>BRAWLER</span>
-</h2>
+                            <small>DEFESA</small>
 
+                            <div class="bar">
+                                <i style="width: 65%"></i>
+                            </div>
 
-<div class="brawler-grid">
+                        </div>
 
+                    </div>
 
-<!-- TARA -->
+                </article>
 
-<article
-class="brawler-card purple">
 
-<div class="character">
+                <!-- SURGE -->
 
-<img
-src="images/tara.png"
-alt="Tara Brawl Stars">
+                <article class="brawler-card blue">
 
-</div>
+                    <div class="character">
 
-<div class="card-content">
+                        <img
+                            src="images/surge.png"
+                            alt="Surge">
 
-<span>ÉPICA</span>
+                    </div>
 
-<h3>TARA</h3>
+                    <div class="card-content">
 
-<p>
-Uma misteriosa guerreira
-capaz de controlar forças
-cósmicas.
-</p>
+                        <span>MÍTICO</span>
 
-<div class="stats">
+                        <h3>SURGE</h3>
 
-<small>ATAQUE</small>
+                        <p>
+                            Um robô espacial que
+                            evolui durante a batalha.
+                        </p>
 
-<div class="bar">
-<i style="width:85%"></i>
-</div>
+                        <div class="stats">
 
-<small>DEFESA</small>
+                            <small>ATAQUE</small>
 
-<div class="bar">
-<i style="width:65%"></i>
-</div>
-
-</div>
-
-</div>
-
-</article>
-
-
-
-<!-- SURGE -->
-
-<article
-class="brawler-card blue">
-
-<div class="character">
-
-<img
-src="images/surge.png"
-alt="Surge Brawl Stars">
-
-</div>
-
-<div class="card-content">
-
-<span>MÍTICO</span>
-
-<h3>SURGE</h3>
-
-<p>
-Um robô espacial que
-evolui durante a batalha.
-</p>
-
-<div class="stats">
-
-<small>ATAQUE</small>
-
-<div class="bar">
-<i style="width:95%"></i>
-</div>
-
-<small>DEFESA</small>
-
-<div class="bar">
-<i style="width:70%"></i>
-</div>
-
-</div>
-
-</div>
-
-</article>
-
-
-
-<!-- EDGAR -->
-
-<article
-class="brawler-card green">
-
-<div class="character">
-
-<img
-src="images/edgar.png"
-alt="Edgar Brawl Stars">
-
-</div>
-
-<div class="card-content">
-
-<span>ÉPICO</span>
-
-<h3>EDGAR</h3>
-
-<p>
-Um lutador misterioso
-que se move rapidamente
-pelas sombras.
-</p>
-
-<div class="stats">
-
-<small>ATAQUE</small>
-
-<div class="bar">
-<i style="width:80%"></i>
-</div>
-
-<small>DEFESA</small>
-
-<div class="bar">
-<i style="width:55%"></i>
-</div>
-
-</div>
-
-</div>
-
-</article>
-
-
-</div>
-
-</section>
-
-
-
-<!-- UNIVERSO -->
-
-<section
-id="universo"
-class="universe">
-
-<div class="alien">
-👽
-</div>
-
-<div class="universe-content">
-
-<p class="section-subtitle">
-UM NOVO UNIVERSO
-</p>
-
-<h2>
-
-O ESPAÇO
-
-<span>PRECISA DE VOCÊ</span>
-
-</h2>
-
-<p>
-
-Uma misteriosa anomalia apareceu
-nos limites do Starr Park.
-
-Portais estão surgindo por toda
-a galáxia e ninguém sabe quem
-está por trás deles.
-
-</p>
-
-<button
-class="btn primary"
-onclick="mensagemAlien()">
-
-🛸 INVESTIGAR PORTAL
-
-</button>
-
-</div>
-
-</section>
-
-
-
-<!-- NOVIDADES -->
-
-<section
-id="novidades"
-class="section">
-
-<p class="section-subtitle">
-TRANSMISSÕES RECENTES
-</p>
-
-<h2>
-
-ÚLTIMAS
-<span>DESCOBERTAS</span>
-
-</h2>
-
-
-<div class="news-grid">
-
-
-<div class="news-card">
-
-<div class="news-icon">
-🌌
-</div>
-
-<h3>
-PORTAL ABERTO
-</h3>
-
-<p>
-
-Um novo portal foi localizado
-próximo ao planeta Starr.
-
-</p>
-
-<button
-onclick="lerNoticia('portal')">
-
-LER MAIS →
-
-</button>
-
-</div>
-
-
-
-<div class="news-card">
-
-<div class="news-icon">
-👽
-</div>
-
-<h3>
-VIDA ALIENÍGENA
-</h3>
-
-<p>
-
-Sinais desconhecidos foram
-detectados vindo de uma
-galáxia distante.
-
-</p>
-
-<button
-onclick="lerNoticia('alien')">
-
-LER MAIS →
-
-</button>
-
-</div>
-
-
-
-<div class="news-card">
-
-<div class="news-icon">
-🚀
-</div>
-
-<h3>
-NOVA MISSÃO
-</h3>
-
-<p>
-
-Prepare sua equipe para uma
-missão além das estrelas.
-
-</p>
-
-<button
-onclick="lerNoticia('missao')">
-
-LER MAIS →
-
-</button>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="footer-logo">
-
-⭐ BRAWL<span>GALAXY</span>
-
-</div>
-
-<p>
-Site de fã criado para fins
-de aprendizado e diversão.
-</p>
-
-<p class="copyright">
-
-© 2026 BrawlGalaxy —
-Projeto independente de fã.
-
-</p>
-
-</footer>
-
-
-
-<!-- POPUP -->
-
-<div
-id="popup"
-class="popup">
-
-<div class="popup-box">
-
-<button onclick="fecharPopup()">
-×
-</button>
-
-<div id="popup-content"></div>
-
-</div>
-
-</div>
-
-
-
-<script>
-
-
-/* =========================
-   POPUP
-========================= */
-
-function abrirPopup(conteudo) {
-
-document
-.getElementById("popup-content")
-.innerHTML = conteudo;
-
-document
-.getElementById("popup")
-.classList
-.add("active");
-
-}
-
-
-function fecharPopup() {
-
-document
-.getElementById("popup")
-.classList
-.remove("active");
-
-}
-
-
-/* =========================
-   ALIEN
-========================= */
-
-function mensagemAlien() {
-
-abrirPopup(`
-
-<h3>
-👽 TRANSMISSÃO RECEBIDA
-</h3>
-
-<p>
-
-"Brawler... conseguimos
-detectar sua presença."
-
-</p>
-
-<br>
-
-<p>
-
-Um portal desconhecido acaba
-de aparecer.
-
-Você está preparado para entrar?
-
-</p>
-
-`);
-
-}
-
-
-/* =========================
-   NOTÍCIAS
-========================= */
-
-function lerNoticia(tipo) {
-
-let conteudo = "";
-
-
-if(tipo === "portal") {
-
-conteudo = `
-
-<h3>
-🌌 PORTAL ABERTO
-</h3>
-
-<p>
-
-Os sensores detectaram
-uma enorme anomalia espacial
-próxima aos limites da galáxia.
-
-</p>
-
-`;
-
-}
-
-
-else if(tipo === "alien") {
-
-conteudo = `
-
-<h3>
-👽 VIDA ALIENÍGENA
-</h3>
-
-<p>
-
-Uma transmissão misteriosa
-foi encontrada.
-
-Os cientistas ainda estão
-tentando descobrir quem está
-enviando o sinal.
-
-</p>
-
-`;
-
-}
-
-
-else {
-
-conteudo = `
-
-<h3>
-🚀 NOVA MISSÃO
-</h3>
-
-<p>
-
-Reúna seus melhores Brawlers
-e prepare-se para explorar
-uma região desconhecida
-do espaço.
-
-</p>
-
-`;
-
-}
-
-
-abrirPopup(conteudo);
-
-}
-
-
-/* =========================
-   FECHAR CLICANDO FORA
-========================= */
-
-document
-.getElementById("popup")
-.addEventListener("click", function(event) {
-
-if(event.target === this) {
-
-fecharPopup();
-
-}
-
-});
-
-
-/* =========================
-   MENU MOBILE
-========================= */
-
-function abrirMenu() {
-
-const menu =
-document.querySelector(".menu");
-
-if(menu.style.display === "flex") {
-
-menu.style.display = "none";
-
-} else {
-
-menu.style.display = "flex";
-
-menu.style.flexDirection = "column";
-
-menu.style.position = "absolute";
-
-menu.style.top = "75px";
-
-menu.style.right = "20px";
-
-menu.style.padding = "25px";
-
-menu.style.background = "#080c20";
-
-menu.style.border = "1px solid #00ffff";
-
-}
-
-}
-
-</script>
-
-
-</body>
-</html>
+                            <div class="bar">
+                                <i style="width: 95%"></i>
+                            </div>
