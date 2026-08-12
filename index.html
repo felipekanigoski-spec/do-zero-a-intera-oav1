@@ -1,97 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>BrawlGalaxy 🚀</title>
+    <title>Paraná Futurista | Conheça o Paraná</title>
+
+    <meta name="description"
+        content="Um portal futurista e informativo sobre o estado do Paraná. História, cultura, turismo, economia, natureza e muito mais.">
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- FUNDO ESPACIAL -->
-    <div class="stars"></div>
-    <div class="stars stars-2"></div>
-    <div class="stars stars-3"></div>
+    <!-- Fundo animado -->
+    <div class="background-grid"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
 
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#inicio" class="logo">
+            <span class="logo-icon">✦</span>
+            PARANÁ<span class="logo-dot">.</span>
+        </a>
 
-    <!-- MENU -->
-    <header>
-
-        <nav class="navbar">
-
-            <a href="#inicio" class="logo">
-                ⭐ BRAWL<span>GALAXY</span>
-            </a>
-
-            <div class="menu" id="menu">
-
-                <a href="#inicio">INÍCIO</a>
-                <a href="#brawlers">BRAWLERS</a>
-                <a href="#jogo">🎮 JOGAR</a>
-                <a href="#universo">UNIVERSO</a>
-                <a href="#novidades">NOVIDADES</a>
-
-            </div>
-
-            <button class="menu-btn" id="menuBtn">
-                ☰
-            </button>
-
+        <nav class="nav" id="nav">
+            <a href="#sobre">Sobre</a>
+            <a href="#turismo">Turismo</a>
+            <a href="#economia">Economia</a>
+            <a href="#cultura">Cultura</a>
+            <a href="#natureza">Natureza</a>
         </nav>
 
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+            ☰
+        </button>
     </header>
 
-
-    <!-- =========================
-         INÍCIO
-    ========================== -->
-
+    <!-- HERO -->
     <main>
 
-        <section id="inicio" class="hero">
+        <section class="hero" id="inicio">
 
             <div class="hero-content">
 
-                <p class="small-title">
-                    🛸 TRANSMISSÃO DA GALÁXIA
-                </p>
+                <div class="badge">
+                    <span class="pulse"></span>
+                    SUL DO BRASIL
+                </div>
 
                 <h1>
-                    BRAWL
-                    <span>GALAXY</span>
+                    DESCUBRA O
+                    <span>PARANÁ</span>
                 </h1>
 
-                <p class="description">
-                    Entre em uma galáxia desconhecida,
-                    escolha seu Brawler e prepare-se
-                    para batalhas intergalácticas.
+                <p class="hero-text">
+                    Um estado de natureza exuberante, cidades inovadoras,
+                    diversidade cultural e uma das economias mais importantes
+                    do Brasil.
                 </p>
 
-                <div class="buttons">
-
-                    <a href="#brawlers" class="btn primary">
-                        🚀 EXPLORAR
+                <div class="hero-buttons">
+                    <a href="#sobre" class="btn btn-primary">
+                        Explorar Paraná
+                        <span>→</span>
                     </a>
 
-                    <a href="#jogo" class="btn secondary">
-                        🎮 JOGAR AGORA
+                    <a href="#turismo" class="btn btn-outline">
+                        Ver destinos
                     </a>
-
                 </div>
 
             </div>
 
+            <div class="hero-visual">
 
-            <div class="planet">
+                <div class="orb">
+                    <div class="orb-ring ring-1"></div>
+                    <div class="orb-ring ring-2"></div>
+                    <div class="orb-ring ring-3"></div>
 
-                <div class="planet-ring"></div>
+                    <div class="parana-symbol">
+                        PR
+                    </div>
+                </div>
 
-                <div class="planet-core">
-                    👽
+                <div class="floating-card card-top">
+                    <span>CAPITAL</span>
+                    <strong>Curitiba</strong>
+                </div>
+
+                <div class="floating-card card-bottom">
+                    <span>REGIÃO</span>
+                    <strong>Sul do Brasil</strong>
                 </div>
 
             </div>
@@ -99,97 +106,550 @@
         </section>
 
 
-        <!-- =========================
-             BRAWLERS
-        ========================== -->
+        <!-- NÚMEROS -->
+        <section class="numbers">
 
-        <section id="brawlers" class="section">
+            <div class="number-card">
+                <span class="number-icon">◎</span>
+                <strong class="counter" data-target="199">0</strong>
+                <small>mil km² de área</small>
+            </div>
 
-            <p class="section-subtitle">
-                PERSONAGENS DA GALÁXIA
-            </p>
+            <div class="number-card">
+                <span class="number-icon">⌁</span>
+                <strong class="counter" data-target="399">0</strong>
+                <small>municípios</small>
+            </div>
 
-            <h2>
-                ESCOLHA SEU
-                <span>BRAWLER</span>
-            </h2>
+            <div class="number-card">
+                <span class="number-icon">◇</span>
+                <strong class="counter" data-target="11">0</strong>
+                <small>milhões de habitantes*</small>
+            </div>
+
+            <div class="number-card">
+                <span class="number-icon">✦</span>
+                <strong>PR</strong>
+                <small>Paraná</small>
+            </div>
+
+        </section>
 
 
-            <div class="brawler-grid">
+        <!-- SOBRE -->
+        <section class="section" id="sobre">
 
+            <div class="section-heading">
+                <span class="section-number">01 / ESTADO</span>
+                <h2>O Paraná em <span>detalhes</span></h2>
+                <p>
+                    Localizado na Região Sul do Brasil, o Paraná possui uma
+                    grande diversidade geográfica, econômica e cultural.
+                </p>
+            </div>
 
-                <!-- TARA -->
+            <div class="info-grid">
 
-                <article class="brawler-card purple">
+                <article class="info-card large">
+                    <div class="card-icon">🌎</div>
+                    <h3>Localização</h3>
+                    <p>
+                        O Paraná faz fronteira com São Paulo, Santa Catarina
+                        e Mato Grosso do Sul. Também faz fronteira internacional
+                        com Argentina e Paraguai.
+                    </p>
 
-                    <div class="character">
-
-                        <img
-                            src="images/tara.png"
-                            alt="Tara">
-
-                    </div>
-
-                    <div class="card-content">
-
-                        <span>ÉPICA</span>
-
-                        <h3>TARA</h3>
-
-                        <p>
-                            Uma misteriosa guerreira
-                            capaz de controlar forças
-                            cósmicas.
-                        </p>
-
-                        <div class="stats">
-
-                            <small>ATAQUE</small>
-
-                            <div class="bar">
-                                <i style="width: 85%"></i>
-                            </div>
-
-                            <small>DEFESA</small>
-
-                            <div class="bar">
-                                <i style="width: 65%"></i>
-                            </div>
-
+                    <div class="mini-data">
+                        <div>
+                            <span>Capital</span>
+                            <strong>Curitiba</strong>
                         </div>
 
+                        <div>
+                            <span>Gentílico</span>
+                            <strong>Paranaense</strong>
+                        </div>
                     </div>
-
                 </article>
 
+                <article class="info-card">
+                    <div class="card-icon">🏙️</div>
+                    <h3>Principais cidades</h3>
+                    <p>
+                        Curitiba, Londrina, Maringá, Ponta Grossa,
+                        Cascavel, São José dos Pinhais e Foz do Iguaçu
+                        estão entre os principais centros urbanos.
+                    </p>
+                </article>
 
-                <!-- SURGE -->
+                <article class="info-card">
+                    <div class="card-icon">🗺️</div>
+                    <h3>Território</h3>
+                    <p>
+                        O território paranaense apresenta planaltos,
+                        serras, vales, rios, florestas e uma faixa litorânea.
+                    </p>
+                </article>
 
-                <article class="brawler-card blue">
+            </div>
 
-                    <div class="character">
+        </section>
 
-                        <img
-                            src="images/surge.png"
-                            alt="Surge">
 
+        <!-- TURISMO -->
+        <section class="section dark-section" id="turismo">
+
+            <div class="section-heading">
+                <span class="section-number">02 / TURISMO</span>
+                <h2>Lugares que parecem <span>outro mundo</span></h2>
+                <p>
+                    Do litoral às grandes quedas d'água, o Paraná possui
+                    destinos para todos os estilos de viagem.
+                </p>
+            </div>
+
+            <div class="destination-grid">
+
+                <article class="destination-card destination-foz">
+                    <div class="destination-overlay">
+                        <span class="tag">MARAVILHA NATURAL</span>
+                        <h3>Cataratas do Iguaçu</h3>
+                        <p>
+                            Um dos maiores conjuntos de quedas d'água
+                            do planeta, localizado em Foz do Iguaçu.
+                        </p>
+                        <button class="more-btn"
+                            data-title="Cataratas do Iguaçu"
+                            data-text="As Cataratas do Iguaçu estão localizadas no Parque Nacional do Iguaçu e formam um dos mais impressionantes cenários naturais do Brasil.">
+                            Saiba mais →
+                        </button>
+                    </div>
+                </article>
+
+                <article class="destination-card destination-ilha">
+                    <div class="destination-overlay">
+                        <span class="tag">LITORAL</span>
+                        <h3>Ilha do Mel</h3>
+                        <p>
+                            Praias, trilhas, natureza preservada e
+                            paisagens únicas no litoral paranaense.
+                        </p>
+                        <button class="more-btn"
+                            data-title="Ilha do Mel"
+                            data-text="A Ilha do Mel é um dos principais destinos turísticos do litoral do Paraná, conhecida por suas praias, trilhas e áreas naturais preservadas.">
+                            Saiba mais →
+                        </button>
+                    </div>
+                </article>
+
+                <article class="destination-card destination-vila">
+                    <div class="destination-overlay">
+                        <span class="tag">GEOLOGIA</span>
+                        <h3>Vila Velha</h3>
+                        <p>
+                            Arenitos esculpidos pela natureza ao longo
+                            de milhares de anos.
+                        </p>
+                        <button class="more-btn"
+                            data-title="Parque Estadual de Vila Velha"
+                            data-text="O Parque Estadual de Vila Velha, próximo a Ponta Grossa, é conhecido por suas formações de arenito, furnas e lagoas.">
+                            Saiba mais →
+                        </button>
+                    </div>
+                </article>
+
+                <article class="destination-card destination-graciosa">
+                    <div class="destination-overlay">
+                        <span class="tag">SERRA DO MAR</span>
+                        <h3>Estrada da Graciosa</h3>
+                        <p>
+                            Uma das estradas históricas mais bonitas
+                            do estado.
+                        </p>
+                        <button class="more-btn"
+                            data-title="Estrada da Graciosa"
+                            data-text="A Estrada da Graciosa atravessa áreas da Serra do Mar e é conhecida pela paisagem, vegetação e importância histórica.">
+                            Saiba mais →
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ECONOMIA -->
+        <section class="section" id="economia">
+
+            <div class="section-heading">
+                <span class="section-number">03 / ECONOMIA</span>
+                <h2>Uma economia <span>diversificada</span></h2>
+                <p>
+                    O Paraná possui forte presença no agronegócio,
+                    indústria, comércio, serviços, energia e tecnologia.
+                </p>
+            </div>
+
+            <div class="economy-grid">
+
+                <article class="economy-card">
+                    <div class="economy-icon">🌾</div>
+                    <h3>Agronegócio</h3>
+                    <p>
+                        O estado possui forte produção de soja, milho,
+                        trigo, feijão, carnes e outros produtos agrícolas.
+                    </p>
+                    <div class="progress">
+                        <span style="width: 90%"></span>
+                    </div>
+                    <small>Setor estratégico</small>
+                </article>
+
+                <article class="economy-card">
+                    <div class="economy-icon">🏭</div>
+                    <h3>Indústria</h3>
+                    <p>
+                        A indústria paranaense reúne segmentos como
+                        automotivo, alimentos, madeira, papel e celulose.
+                    </p>
+                    <div class="progress">
+                        <span style="width: 78%"></span>
+                    </div>
+                    <small>Grande diversidade</small>
+                </article>
+
+                <article class="economy-card">
+                    <div class="economy-icon">⚡</div>
+                    <h3>Energia</h3>
+                    <p>
+                        O Paraná possui importante participação na geração
+                        de energia elétrica brasileira.
+                    </p>
+                    <div class="progress">
+                        <span style="width: 85%"></span>
+                    </div>
+                    <small>Infraestrutura energética</small>
+                </article>
+
+                <article class="economy-card">
+                    <div class="economy-icon">💻</div>
+                    <h3>Tecnologia</h3>
+                    <p>
+                        Curitiba e outras cidades concentram empresas,
+                        startups, universidades e iniciativas de inovação.
+                    </p>
+                    <div class="progress">
+                        <span style="width: 72%"></span>
+                    </div>
+                    <small>Ecossistema de inovação</small>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- NATUREZA -->
+        <section class="section nature-section" id="natureza">
+
+            <div class="nature-content">
+
+                <div class="section-heading">
+                    <span class="section-number">04 / NATUREZA</span>
+                    <h2>Entre a <span>floresta</span> e o oceano</h2>
+                </div>
+
+                <p>
+                    A natureza paranaense é marcada pela presença de
+                    diferentes ambientes, incluindo Mata Atlântica,
+                    Floresta com Araucárias, campos, rios, serras
+                    e ambientes costeiros.
+                </p>
+
+                <div class="nature-list">
+
+                    <div>
+                        <span>01</span>
+                        <strong>Araucária</strong>
+                        <small>Um dos símbolos naturais do estado</small>
                     </div>
 
-                    <div class="card-content">
+                    <div>
+                        <span>02</span>
+                        <strong>Serra do Mar</strong>
+                        <small>Montanhas e Mata Atlântica</small>
+                    </div>
 
-                        <span>MÍTICO</span>
+                    <div>
+                        <span>03</span>
+                        <strong>Litoral</strong>
+                        <small>Praias, ilhas e ecossistemas costeiros</small>
+                    </div>
 
-                        <h3>SURGE</h3>
+                </div>
 
+            </div>
+
+            <div class="nature-visual">
+                <div class="tree">🌲</div>
+                <div class="mountain">▲</div>
+                <div class="sun"></div>
+            </div>
+
+        </section>
+
+
+        <!-- CULTURA -->
+        <section class="section" id="cultura">
+
+            <div class="section-heading">
+                <span class="section-number">05 / CULTURA</span>
+                <h2>Uma mistura de <span>culturas</span></h2>
+                <p>
+                    A identidade paranaense foi construída por diferentes
+                    povos, tradições, comunidades e influências.
+                </p>
+            </div>
+
+            <div class="culture-grid">
+
+                <article class="culture-card">
+                    <span>🥘</span>
+                    <h3>Barreado</h3>
+                    <p>
+                        Prato tradicional do litoral do Paraná,
+                        especialmente associado à região de Morretes.
+                    </p>
+                </article>
+
+                <article class="culture-card">
+                    <span>🌰</span>
+                    <h3>Pinhão</h3>
+                    <p>
+                        Semente da araucária muito presente na culinária
+                        e nas tradições do Sul do Brasil.
+                    </p>
+                </article>
+
+                <article class="culture-card">
+                    <span>🎉</span>
+                    <h3>Festas</h3>
+                    <p>
+                        Festas populares e eventos regionais ajudam
+                        a preservar as tradições paranaenses.
+                    </p>
+                </article>
+
+                <article class="culture-card">
+                    <span>🌍</span>
+                    <h3>Imigração</h3>
+                    <p>
+                        Italianos, alemães, poloneses, ucranianos,
+                        japoneses e outros grupos deixaram marcas
+                        na cultura do estado.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- HISTÓRIA -->
+        <section class="section dark-section">
+
+            <div class="section-heading">
+                <span class="section-number">06 / HISTÓRIA</span>
+                <h2>Uma história de <span>transformação</span></h2>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div>
+                        <span>ANTES DA COLONIZAÇÃO</span>
+                        <h3>Povos originários</h3>
                         <p>
-                            Um robô espacial que
-                            evolui durante a batalha.
+                            O território paranaense é historicamente
+                            habitado por diferentes povos indígenas.
                         </p>
+                    </div>
+                </div>
 
-                        <div class="stats">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div>
+                        <span>SÉCULOS XVIII–XIX</span>
+                        <h3>Caminhos e tropeirismo</h3>
+                        <p>
+                            Os caminhos dos tropeiros tiveram papel
+                            importante na ocupação e desenvolvimento
+                            de diversas regiões.
+                        </p>
+                    </div>
+                </div>
 
-                            <small>ATAQUE</small>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div>
+                        <span>1853</span>
+                        <h3>Emancipação política</h3>
+                        <p>
+                            O Paraná tornou-se uma província separada
+                            de São Paulo em 1853.
+                        </p>
+                    </div>
+                </div>
 
-                            <div class="bar">
-                                <i style="width: 95%"></i>
-                            </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div>
+                        <span>SÉCULO XX</span>
+                        <h3>Urbanização e crescimento</h3>
+                        <p>
+                            O estado passou por forte crescimento urbano,
+                            industrial e agrícola.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div>
+                        <span>HOJE</span>
+                        <h3>Paraná contemporâneo</h3>
+                        <p>
+                            Um estado conectado ao Brasil e ao mundo,
+                            com forte economia e diversidade regional.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CURIOSIDADES -->
+        <section class="section">
+
+            <div class="section-heading center">
+                <span class="section-number">07 / CURIOSIDADES</span>
+                <h2>Você sabia?</h2>
+            </div>
+
+            <div class="facts">
+
+                <div class="fact">
+                    <span>01</span>
+                    <p>
+                        O nome Paraná tem origem indígena e está relacionado
+                        à ideia de rio ou grande rio.
+                    </p>
+                </div>
+
+                <div class="fact">
+                    <span>02</span>
+                    <p>
+                        Curitiba é conhecida internacionalmente por
+                        iniciativas de planejamento urbano e transporte.
+                    </p>
+                </div>
+
+                <div class="fact">
+                    <span>03</span>
+                    <p>
+                        O Parque Nacional do Iguaçu protege uma área
+                        de grande importância ambiental.
+                    </p>
+                </div>
+
+                <div class="fact">
+                    <span>04</span>
+                    <p>
+                        O Paraná possui uma das maiores redes hidrográficas
+                        da Região Sul.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta">
+
+            <div class="cta-lines"></div>
+
+            <span>PARANÁ • BRASIL</span>
+
+            <h2>
+                UM ESTADO.
+                <br>
+                <strong>MILHARES DE HISTÓRIAS.</strong>
+            </h2>
+
+            <p>
+                Explore, conheça e descubra o Paraná.
+            </p>
+
+            <a href="#inicio" class="btn btn-primary">
+                Voltar ao início ↑
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <button class="modal-close" id="modalClose">
+                ×
+            </button>
+
+            <span class="section-number">PARANÁ / DESTINO</span>
+
+            <h2 id="modalTitle">
+                Título
+            </h2>
+
+            <p id="modalText">
+                Texto
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            PARANÁ<span>.</span>
+        </div>
+
+        <p>
+            Projeto informativo e educacional sobre o estado do Paraná.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <small>
+            © 2026 Paraná Futurista • Desenvolvido para a web
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
